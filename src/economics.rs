@@ -19,7 +19,7 @@ pub const TARGET_BLOCK_TIME_SECS: u64 = 360;
 pub const HALVING_INTERVAL_BLOCKS: u64 = 360_000;
 pub const MAX_HALVINGS: u32 = 36;
 pub const INITIAL_SUBSIDY: u128 = 500 * ATC_BASE_UNITS;
-pub const FINAL_EMISSION_BLOCK: u64 = HALVING_INTERVAL_BLOCKS * MAX_HALVINGS - 1;
+pub const FINAL_EMISSION_BLOCK: u64 = HALVING_INTERVAL_BLOCKS * (MAX_HALVINGS as u64) - 1;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub struct MonetaryPolicy;
@@ -27,7 +27,7 @@ pub struct MonetaryPolicy;
 impl MonetaryPolicy {
     pub const fn epoch(height: u64) -> u32 {
         let epoch = height / HALVING_INTERVAL_BLOCKS;
-        if epoch >= MAX_HALVINGS { MAX_HALVINGS } else { epoch as u32 }
+        if epoch >= MAX_HALVINGS as u64 { MAX_HALVINGS } else { epoch as u32 }
     }
 
     pub const fn raw_subsidy(height: u64) -> u128 {
