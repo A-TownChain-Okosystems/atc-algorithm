@@ -69,3 +69,5 @@ The final emission block is 12,959,999. The remainder rule exists only to close 
 - checked arithmetic / bounded issuance
 - explicit off-by-one boundaries
 - no reward authority in AI or telemetry components
+
+Implementation note: consensus code is validated by the repository test suite before merge.
