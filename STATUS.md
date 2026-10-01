@@ -5,7 +5,7 @@ version: 1.0.0
 status: active
 owner: A-TownChain-Okosystems
 created: 2026-09-08
-updated: 2026-09-08
+updated: 2026-10-02
 standard: ATC-STD-MD-001
 ---
 
@@ -24,6 +24,6 @@ standard: ATC-STD-MD-001
 
 ## Status Summary
 
-Das Repository `atc-algorithm` befindet sich im Status `development` (Maturity R1-Skeleton nach ATC-STD-201, Konsens-Komponente für PoH + PoS + PoW Hybrid Consensus nach AD-044).
+Das Repository `atc-algorithm` befindet sich im Status `development` (Maturity R1-Skeleton nach ATC-STD-201, Konsens-Skeleton für PoH/PoS/PoW-Hybrid; normative Konsensregeln sind weiterhin SPEC-DRAFT und nicht eingefroren).
 
-- 12.09.2026 (SCR-0119): ATC-HASH-001 "TownHash-256" live — EIGENSTAENDIGER Hash-Algorithmus per Owner-Direktive ("wie SHA-256, aber unserer"): Merkle-Damgard, 512-Bit-Bloecke, 8x32-Bit-Zustand, 24 Runden, Little-Endian-Wire, alle Konstanten ganzzahlig aus splitmix32 (Seed 0xA7C0DE01) als const fn abgeleitet — keine Bibliothek. Spezifikation docs/SPEC-ATC-HASH-001.md mit 6 differenzialgesicherten Testvektoren (Python-Referenz vs. Rust-Implementierung). 5 Unit-Tests: Goldene Vektoren, Determinismus/Laengenband 0-130, Bitflip-Erkennung, Padding-Kanten 55/56/57/119/120/121. Ehrlich: NICHT kryptoanalysiert — kein Mainnet ohne externe Krypto-Pruefung (F-067-Gate); Devnet-Grade als FNV-1a-Nachfolger, Adoption in atc-node als naechste Welle.
+- 12.09.2026 (SCR-0119): ATC-HASH-001 "TownHash-256" exists as a development component: Merkle-Damgard, 512-Bit-Bloecke, 8x32-Bit-Zustand, 24 Runden, Little-Endian-Wire, alle Konstanten ganzzahlig aus splitmix32 (Seed 0xA7C0DE01) als const fn abgeleitet — keine Bibliothek. Spezifikation docs/SPEC-ATC-HASH-001.md mit 6 differenzialgesicherten Testvektoren (Python-Referenz vs. Rust-Implementierung). 5 Unit-Tests: Goldene Vektoren, Determinismus/Laengenband 0-130, Bitflip-Erkennung, Padding-Kanten 55/56/57/119/120/121. Ehrlich: NICHT kryptoanalysiert — kein Mainnet ohne externe Krypto-Pruefung (F-067-Gate); Devnet-Grade als FNV-1a-Nachfolger, Adoption in atc-node als naechste Welle.
