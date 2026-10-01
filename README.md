@@ -92,7 +92,7 @@ atc-algorithm/
 
 ## Requirements
 
-- Rust `1.75+`
+- Rust `1.98.1` (stable baseline)
 - Python `3.10+` for validation tooling
 - Git `2.30+`
 
