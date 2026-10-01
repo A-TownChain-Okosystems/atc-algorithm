@@ -1,6 +1,6 @@
 # ATC Algorithm
 
-> **ATC COMPLIANCE: R1** — repository governance baseline. This repository is the **canonical consensus implementation target**, but it is **not yet production-ready**.
+> **MIGRATED / NON-CANONICAL** — consensus ownership has moved to `a-townchain/components/algorithm`. This repository is retained as migration history and must not become a second consensus authority.
 
 **Project:** atc-algorithm  
 **Organization:** A-TownChain-Okosystems  
@@ -10,7 +10,7 @@
 
 ## Overview
 
-`atc-algorithm` is the canonical consensus repository for A-TownChain (Chain-ID `658467`). It contains the current MVP/skeleton implementation and the normative consensus work required for a production release.
+The canonical consensus implementation path is now `a-townchain/components/algorithm` in the A-TownChain monorepo (Chain-ID `658467`). The source repository was migrated there with history under SCR-0127.
 
 **Critical truth:** the presence of PoH/selection prototype code and passing local tests does **not** constitute a complete, secure, deterministic or production-ready consensus protocol. Consensus remains a P0 release blocker until specification freeze, complete implementation, conformance, security review and independent evidence are complete.
 
@@ -26,7 +26,7 @@ The repository owns the canonical consensus logic for:
 - Finality rules
 - Consensus verification and adversarial testing
 
-`a-townchain` is the orchestration/integration layer and must not become a second canonical consensus implementation.
+`a-townchain/components/algorithm` is the canonical implementation. This repository is not an active implementation authority and must not receive divergent consensus changes.
 
 ## Status
 
@@ -99,9 +99,7 @@ atc-algorithm/
 ## Installation
 
 ```bash
-git clone https://github.com/A-TownChain-Okosystems/atc-algorithm.git
-cd atc-algorithm
-cargo build
+Use the canonical monorepo path: `a-townchain/components/algorithm`.
 ```
 
 ## Testing
