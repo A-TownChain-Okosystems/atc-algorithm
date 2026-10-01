@@ -7,14 +7,15 @@ pub struct Tick {
     pub hash: u64,
 }
 
-/// FNV-1a 64-Bit-Hash (MVP; kein kryptografischer Hash — siehe Moduldoku).
-pub fn fnv1a(data: &[u8]) -> u64 {
-    let mut h: u64 = 0xcbf29ce484222325;
-    for &b in data {
-        h ^= b as u64;
-        h = h.wrapping_mul(0x100000001b3);
-    }
-    h
+/// SHA-256 sequencing primitive for the MVP boundary.
+///
+/// This is deliberately not declared protocol-canonical while the consensus
+/// specification remains unfrozen. A non-cryptographic hash is not permitted
+/// in the consensus selection/sequencing path.
+pub fn hash64(data: &[u8]) -> u64 {
+    use sha2::{Digest, Sha256};
+    let digest = Sha256::digest(data);
+    u64::from_be_bytes(digest[..8].try_into().expect("fixed SHA-256 prefix"))
 }
 
 pub struct PohChain {
@@ -30,7 +31,7 @@ impl PohChain {
         let prev = self.ticks.last().unwrap();
         let next = Tick {
             slot: prev.slot + 1,
-            hash: fnv1a(&prev.hash.to_le_bytes()),
+            hash: hash64(&prev.hash.to_le_bytes()),
         };
         self.ticks.push(next.clone());
         next
@@ -40,7 +41,7 @@ impl PohChain {
         for i in 1..self.ticks.len() {
             let prev = &self.ticks[i - 1];
             let cur = &self.ticks[i];
-            if cur.slot != prev.slot + 1 || cur.hash != fnv1a(&prev.hash.to_le_bytes()) {
+            if cur.slot != prev.slot + 1 || cur.hash != hash64(&prev.hash.to_le_bytes()) {
                 return false;
             }
         }
