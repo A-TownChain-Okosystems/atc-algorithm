@@ -26,7 +26,7 @@ The repository may document and support the following consensus workstreams; imp
 - Finality rules
 - Consensus verification and adversarial testing
 
-`a-townchain` is the orchestration/integration layer and must not become a second canonical consensus implementation.
+`a-townchain` owns the canonical blockchain core, including consensus code under `components/algorithm`; integration layers must consume that implementation rather than duplicate it.
 
 ## Status
 
