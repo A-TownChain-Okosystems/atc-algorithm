@@ -1,6 +1,6 @@
 # ATC Algorithm
 
-> **ATC COMPLIANCE: R1** — repository governance baseline. This repository is the **canonical consensus implementation target**, but it is **not yet production-ready**.
+> **ATC COMPLIANCE: R1 — DEVELOPMENT / NOT PRODUCTION-READY.** This repository is supporting specification/governance material; the canonical algorithm/consensus implementation is `a-townchain/components/algorithm`.
 
 **Project:** atc-algorithm  
 **Organization:** A-TownChain-Okosystems  
@@ -10,13 +10,13 @@
 
 ## Overview
 
-`atc-algorithm` is the canonical consensus repository for A-TownChain (Chain-ID `658467`). It contains the current MVP/skeleton implementation and the normative consensus work required for a production release.
+`atc-algorithm` is a supporting repository for algorithm/consensus specifications, governance and development material. The canonical algorithm/consensus implementation is `a-townchain/components/algorithm`. Do not treat this repository as a competing production consensus implementation. Chain identity and protocol semantics remain owned by canonical chain configuration and standards.
 
 **Critical truth:** the presence of PoH/selection prototype code and passing local tests does **not** constitute a complete, secure, deterministic or production-ready consensus protocol. Consensus remains a P0 release blocker until specification freeze, complete implementation, conformance, security review and independent evidence are complete.
 
 ## Purpose
 
-The repository owns the canonical consensus logic for:
+The repository may document and support the following consensus workstreams; implementation ownership remains in `a-townchain/components/algorithm`:
 
 - Proof-of-History sequencing
 - Proof-of-Stake validator weighting
