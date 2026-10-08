@@ -61,6 +61,14 @@ impl PohChain {
     }
 
     pub fn verify(&self) -> bool {
+        // A non-empty chain must start at the canonical genesis slot.
+        // Without this check, a single tick with slot=u64::MAX incorrectly verifies.
+        if let Some(first) = self.ticks.first() {
+            if first.slot != 0 {
+                return false;
+            }
+        }
+
         for i in 1..self.ticks.len() {
             let prev = &self.ticks[i - 1];
             let cur = &self.ticks[i];
