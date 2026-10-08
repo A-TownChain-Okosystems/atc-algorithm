@@ -47,7 +47,9 @@ The consensus P0 remains **OPEN** until all of the following are evidenced:
 
 **Mainnet:** `NO-GO` while any P0 gate is open.
 
-## Architecture
+## Architecture — candidate workstream, not frozen protocol
+
+The sequence below illustrates work areas described by historical/candidate material. It does **not** establish that PoH, PoS, PoW, their combination, validator weighting, fork choice or finality has been approved as the final protocol. The canonical specification and implementation must be reconciled before any protocol claim is treated as normative.
 
 ```text
 Transactions / Blocks
