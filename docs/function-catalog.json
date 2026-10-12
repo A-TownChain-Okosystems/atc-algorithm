@@ -1,0 +1,958 @@
+{
+  "catalog_id": "ATC-ALGORITHM-FUNCTION-CATALOG",
+  "catalog_version": "0.1.0",
+  "catalog_status": "SOURCE_INVENTORY_BASELINE_NOT_COMPLETE",
+  "normative": false,
+  "repository": "A-TownChain-Okosystems/atc-algorithm",
+  "source_ref": "main",
+  "source_tree_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93",
+  "scope": {
+    "languages": [
+      "Rust",
+      "Python"
+    ],
+    "included": "Function declarations in src/**/*.rs and discovered *.py files; includes test functions",
+    "excluded": [
+      "YAML workflows and declarative registries are not functions and are inventoried separately",
+      "Rust macro-generated functions and dynamically generated callables may not be statically discovered"
+    ],
+    "limitations": [
+      "Signature text is source excerpt, not a parsed type-level contract",
+      "Function names/signatures do not establish behavior",
+      "Normative consensus semantics remain BLOCKED until specs are frozen"
+    ]
+  },
+  "summary": {
+    "source_files": 6,
+    "functions_discovered": 37,
+    "tests_detected": 18,
+    "semantic_contracts_verified": 0
+  },
+  "functions": [
+    {
+      "id": "src/economics.rs#epoch@28",
+      "name": "epoch",
+      "kind": "rust_function",
+      "source": {
+        "path": "src/economics.rs",
+        "line_start": 28,
+        "sha": "f415428712ad99302ff54d6e090cb72e600570b6"
+      },
+      "signature_source": "pub const fn epoch(height: u64) -> u32 {",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/economics.rs#raw_subsidy@33",
+      "name": "raw_subsidy",
+      "kind": "rust_function",
+      "source": {
+        "path": "src/economics.rs",
+        "line_start": 33,
+        "sha": "f415428712ad99302ff54d6e090cb72e600570b6"
+      },
+      "signature_source": "pub const fn raw_subsidy(height: u64) -> u128 {",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/economics.rs#subsidy@39",
+      "name": "subsidy",
+      "kind": "rust_function",
+      "source": {
+        "path": "src/economics.rs",
+        "line_start": 39,
+        "sha": "f415428712ad99302ff54d6e090cb72e600570b6"
+      },
+      "signature_source": "pub const fn subsidy(height: u64, issued_before_block: u128) -> u128 {",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/economics.rs#protocol_constants_are_fixed@52",
+      "name": "protocol_constants_are_fixed",
+      "kind": "test_function",
+      "source": {
+        "path": "src/economics.rs",
+        "line_start": 52,
+        "sha": "f415428712ad99302ff54d6e090cb72e600570b6"
+      },
+      "signature_source": "fn protocol_constants_are_fixed() {",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/economics.rs#epoch_boundaries_are_height_only@60",
+      "name": "epoch_boundaries_are_height_only",
+      "kind": "test_function",
+      "source": {
+        "path": "src/economics.rs",
+        "line_start": 60,
+        "sha": "f415428712ad99302ff54d6e090cb72e600570b6"
+      },
+      "signature_source": "fn epoch_boundaries_are_height_only() {",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/economics.rs#subsidy_halves_at_each_boundary@70",
+      "name": "subsidy_halves_at_each_boundary",
+      "kind": "test_function",
+      "source": {
+        "path": "src/economics.rs",
+        "line_start": 70,
+        "sha": "f415428712ad99302ff54d6e090cb72e600570b6"
+      },
+      "signature_source": "fn subsidy_halves_at_each_boundary() {",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/economics.rs#supply_cap_is_fail_closed@78",
+      "name": "supply_cap_is_fail_closed",
+      "kind": "test_function",
+      "source": {
+        "path": "src/economics.rs",
+        "line_start": 78,
+        "sha": "f415428712ad99302ff54d6e090cb72e600570b6"
+      },
+      "signature_source": "fn supply_cap_is_fail_closed() {",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/economics.rs#final_emission_block_closes_integer_rounding_dust@83",
+      "name": "final_emission_block_closes_integer_rounding_dust",
+      "kind": "test_function",
+      "source": {
+        "path": "src/economics.rs",
+        "line_start": 83,
+        "sha": "f415428712ad99302ff54d6e090cb72e600570b6"
+      },
+      "signature_source": "fn final_emission_block_closes_integer_rounding_dust() {",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/hash.rs#splitmix32@12",
+      "name": "splitmix32",
+      "kind": "rust_function",
+      "source": {
+        "path": "src/hash.rs",
+        "line_start": 12,
+        "sha": "97d3bee54f95caf2439765383041b0e120d1ab46"
+      },
+      "signature_source": "const fn splitmix32(state: u32) -> (u32, u32) {",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/hash.rs#derive_iv@21",
+      "name": "derive_iv",
+      "kind": "rust_function",
+      "source": {
+        "path": "src/hash.rs",
+        "line_start": 21,
+        "sha": "97d3bee54f95caf2439765383041b0e120d1ab46"
+      },
+      "signature_source": "const fn derive_iv() -> [u32; 8] {",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/hash.rs#derive_k@34",
+      "name": "derive_k",
+      "kind": "rust_function",
+      "source": {
+        "path": "src/hash.rs",
+        "line_start": 34,
+        "sha": "97d3bee54f95caf2439765383041b0e120d1ab46"
+      },
+      "signature_source": "const fn derive_k() -> [u32; 24] {",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/hash.rs#compress@57",
+      "name": "compress",
+      "kind": "rust_function",
+      "source": {
+        "path": "src/hash.rs",
+        "line_start": 57,
+        "sha": "97d3bee54f95caf2439765383041b0e120d1ab46"
+      },
+      "signature_source": "fn compress(h: &[u32; 8], block: &[u8; 64]) -> [u32; 8] {",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/hash.rs#atc_hash@113",
+      "name": "atc_hash",
+      "kind": "rust_function",
+      "source": {
+        "path": "src/hash.rs",
+        "line_start": 113,
+        "sha": "97d3bee54f95caf2439765383041b0e120d1ab46"
+      },
+      "signature_source": "pub fn atc_hash(input: &[u8]) -> [u8; 32] {",
+      "docstring": "ATC-HASH-001 Digest (32 Bytes) ueber die Eingabe.",
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/hash.rs#atc_hash_hex@136",
+      "name": "atc_hash_hex",
+      "kind": "rust_function",
+      "source": {
+        "path": "src/hash.rs",
+        "line_start": 136,
+        "sha": "97d3bee54f95caf2439765383041b0e120d1ab46"
+      },
+      "signature_source": "pub fn atc_hash_hex(input: &[u8]) -> String {",
+      "docstring": "Hex-Darstellung (Kleinbuchstaben) — Convenience fuer Tests und Logs.",
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/hash.rs#goldene_vektoren_aus_python_referenz@145",
+      "name": "goldene_vektoren_aus_python_referenz",
+      "kind": "test_function",
+      "source": {
+        "path": "src/hash.rs",
+        "line_start": 145,
+        "sha": "97d3bee54f95caf2439765383041b0e120d1ab46"
+      },
+      "signature_source": "fn goldene_vektoren_aus_python_referenz() {",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/hash.rs#goldene_vektoren_blockgrenzen@164",
+      "name": "goldene_vektoren_blockgrenzen",
+      "kind": "test_function",
+      "source": {
+        "path": "src/hash.rs",
+        "line_start": 164,
+        "sha": "97d3bee54f95caf2439765383041b0e120d1ab46"
+      },
+      "signature_source": "fn goldene_vektoren_blockgrenzen() {",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/hash.rs#determinismus_und_laengenband@173",
+      "name": "determinismus_und_laengenband",
+      "kind": "test_function",
+      "source": {
+        "path": "src/hash.rs",
+        "line_start": 173,
+        "sha": "97d3bee54f95caf2439765383041b0e120d1ab46"
+      },
+      "signature_source": "fn determinismus_und_laengenband() {",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/hash.rs#bitflip_aendert_digest@186",
+      "name": "bitflip_aendert_digest",
+      "kind": "test_function",
+      "source": {
+        "path": "src/hash.rs",
+        "line_start": 186,
+        "sha": "97d3bee54f95caf2439765383041b0e120d1ab46"
+      },
+      "signature_source": "fn bitflip_aendert_digest() {",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/hash.rs#padding_kante_laengen_55_56_57@194",
+      "name": "padding_kante_laengen_55_56_57",
+      "kind": "test_function",
+      "source": {
+        "path": "src/hash.rs",
+        "line_start": 194,
+        "sha": "97d3bee54f95caf2439765383041b0e120d1ab46"
+      },
+      "signature_source": "fn padding_kante_laengen_55_56_57() {",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/poh.rs#fmt@20",
+      "name": "fmt",
+      "kind": "rust_function",
+      "source": {
+        "path": "src/poh.rs",
+        "line_start": 20,
+        "sha": "a73c320cd2f6c2140f97928ebfa21d212f0fa550"
+      },
+      "signature_source": "fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/poh.rs#fnv1a@31",
+      "name": "fnv1a",
+      "kind": "rust_function",
+      "source": {
+        "path": "src/poh.rs",
+        "line_start": 31,
+        "sha": "a73c320cd2f6c2140f97928ebfa21d212f0fa550"
+      },
+      "signature_source": "pub fn fnv1a(data: &[u8]) -> u64 {",
+      "docstring": "FNV-1a 64-Bit-Hash (MVP; kein kryptografischer Hash — siehe Moduldoku).",
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/poh.rs#genesis@45",
+      "name": "genesis",
+      "kind": "rust_function",
+      "source": {
+        "path": "src/poh.rs",
+        "line_start": 45,
+        "sha": "a73c320cd2f6c2140f97928ebfa21d212f0fa550"
+      },
+      "signature_source": "pub fn genesis(seed: u64) -> Self {",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/poh.rs#tick@50",
+      "name": "tick",
+      "kind": "rust_function",
+      "source": {
+        "path": "src/poh.rs",
+        "line_start": 50,
+        "sha": "a73c320cd2f6c2140f97928ebfa21d212f0fa550"
+      },
+      "signature_source": "pub fn tick(&mut self) -> Result<Tick, PohError> {",
+      "docstring": "Append the next PoH tick and reject invalid chain state explicitly.",
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/poh.rs#verify@63",
+      "name": "verify",
+      "kind": "rust_function",
+      "source": {
+        "path": "src/poh.rs",
+        "line_start": 63,
+        "sha": "a73c320cd2f6c2140f97928ebfa21d212f0fa550"
+      },
+      "signature_source": "pub fn verify(&self) -> bool {",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/poh.rs#ticks@85",
+      "name": "ticks",
+      "kind": "rust_function",
+      "source": {
+        "path": "src/poh.rs",
+        "line_start": 85,
+        "sha": "a73c320cd2f6c2140f97928ebfa21d212f0fa550"
+      },
+      "signature_source": "pub fn ticks(&self) -> &[Tick] {",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/poh.rs#genesis_und_tick_kette@95",
+      "name": "genesis_und_tick_kette",
+      "kind": "test_function",
+      "source": {
+        "path": "src/poh.rs",
+        "line_start": 95,
+        "sha": "a73c320cd2f6c2140f97928ebfa21d212f0fa550"
+      },
+      "signature_source": "fn genesis_und_tick_kette() {",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/poh.rs#manipulation_wird_erkannt@105",
+      "name": "manipulation_wird_erkannt",
+      "kind": "test_function",
+      "source": {
+        "path": "src/poh.rs",
+        "line_start": 105,
+        "sha": "a73c320cd2f6c2140f97928ebfa21d212f0fa550"
+      },
+      "signature_source": "fn manipulation_wird_erkannt() {",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/poh.rs#determinismus@116",
+      "name": "determinismus",
+      "kind": "test_function",
+      "source": {
+        "path": "src/poh.rs",
+        "line_start": 116,
+        "sha": "a73c320cd2f6c2140f97928ebfa21d212f0fa550"
+      },
+      "signature_source": "fn determinismus() {",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/poh.rs#slot_overflow_is_rejected@127",
+      "name": "slot_overflow_is_rejected",
+      "kind": "test_function",
+      "source": {
+        "path": "src/poh.rs",
+        "line_start": 127,
+        "sha": "a73c320cd2f6c2140f97928ebfa21d212f0fa550"
+      },
+      "signature_source": "fn slot_overflow_is_rejected() {",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/poh.rs#missing_genesis_is_rejected@136",
+      "name": "missing_genesis_is_rejected",
+      "kind": "test_function",
+      "source": {
+        "path": "src/poh.rs",
+        "line_start": 136,
+        "sha": "a73c320cd2f6c2140f97928ebfa21d212f0fa550"
+      },
+      "signature_source": "fn missing_genesis_is_rejected() {",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/selection.rs#select_proposer@14",
+      "name": "select_proposer",
+      "kind": "rust_function",
+      "source": {
+        "path": "src/selection.rs",
+        "line_start": 14,
+        "sha": "b04c29ac55b8953d0ebb3a83cc002a758d181da5"
+      },
+      "signature_source": "pub fn select_proposer(validators: &[Validator], slot: u64) -> Option<Validator> {",
+      "docstring": "Deterministische, Stake-gewichtete Wahl. None bei leerer/Null-Stake-Menge.",
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/selection.rs#leer_und_null_stake@35",
+      "name": "leer_und_null_stake",
+      "kind": "test_function",
+      "source": {
+        "path": "src/selection.rs",
+        "line_start": 35,
+        "sha": "b04c29ac55b8953d0ebb3a83cc002a758d181da5"
+      },
+      "signature_source": "fn leer_und_null_stake() {",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/selection.rs#deterministisch_pro_slot@41",
+      "name": "deterministisch_pro_slot",
+      "kind": "test_function",
+      "source": {
+        "path": "src/selection.rs",
+        "line_start": 41,
+        "sha": "b04c29ac55b8953d0ebb3a83cc002a758d181da5"
+      },
+      "signature_source": "fn deterministisch_pro_slot() {",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "src/selection.rs#jede_wahl_ist_valide@49",
+      "name": "jede_wahl_ist_valide",
+      "kind": "test_function",
+      "source": {
+        "path": "src/selection.rs",
+        "line_start": 49,
+        "sha": "b04c29ac55b8953d0ebb3a83cc002a758d181da5"
+      },
+      "signature_source": "fn jede_wahl_ist_valide() {",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "tools/determinism_check.py#scan_sources@34",
+      "name": "scan_sources",
+      "kind": "python_function",
+      "source": {
+        "path": "tools/determinism_check.py",
+        "line_start": 34,
+        "sha": "6fed9ce74bb76416b3c23ad718d334dce08b445d"
+      },
+      "signature_source": "def scan_sources(root, lang):",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "tools/determinism_check.py#run_tests@53",
+      "name": "run_tests",
+      "kind": "python_function",
+      "source": {
+        "path": "tools/determinism_check.py",
+        "line_start": 53,
+        "sha": "6fed9ce74bb76416b3c23ad718d334dce08b445d"
+      },
+      "signature_source": "def run_tests(cmd, cwd):",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    },
+    {
+      "id": "tools/determinism_check.py#main@57",
+      "name": "main",
+      "kind": "python_function",
+      "source": {
+        "path": "tools/determinism_check.py",
+        "line_start": 57,
+        "sha": "6fed9ce74bb76416b3c23ad718d334dce08b445d"
+      },
+      "signature_source": "def main():",
+      "docstring": null,
+      "status": "DISCOVERED_NOT_SEMANTICALLY_VERIFIED",
+      "contract": {
+        "preconditions": "UNSPECIFIED",
+        "postconditions": "UNSPECIFIED",
+        "errors": "UNSPECIFIED",
+        "side_effects": "UNSPECIFIED",
+        "determinism": "UNSPECIFIED",
+        "security_invariants": "UNSPECIFIED"
+      },
+      "evidence": {
+        "tests": "NOT_RECONCILED",
+        "exact_sha": "5a5628044ef4daacca943062eac3fd27a2eaec93"
+      }
+    }
+  ]
+}
